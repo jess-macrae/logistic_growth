@@ -1,4 +1,4 @@
-#Script for comparing exponential and lgoistic growth curves
+#Script for comparing exponential and logistic growth curves
 
 #install and load necessary library
 install.packages(gglplot2)
