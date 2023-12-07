@@ -35,5 +35,5 @@ comparing the exponential and logistic growth curves (using the same
 parameter estimates you found). Upload this graph to your repo and
 include it in the README.md file so it can be viewed in the repo
 homepage.
-1
+- [comparing_exponential_and_logistic_growth.R](comparing_exponential_and_logistic_growth.R)
 
