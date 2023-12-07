@@ -16,16 +16,16 @@ This is the order of steps for data analysis using each repo provided:
 3. _assess the fit of the model to the experiment 1 data graphically_
    - define the logistic growth function and set model parameters of initial population size (N0), growth rate (r) and carrying capacity (K)
    - plot the model data curve, and then the actual data points
-   **- K <- 5.979e+10
-   - r <- 0.0095218
-   - N0 <- 1320**
+   - **K <- 5.979e+10**
+   - **r <- 0.0095218**
+   - **N0 <- 1320**
 
 There is good fit of the logistic model to the actual data. This suggests the logistic model is reliable for describing the population growth dynamics of _Escherichia coli_. This means the data has a rapid initial exponential growth phase, followed by a plateau as the population reaches carrying capacity and resources become limited. The good fit means the estimated parameters K, N0 and r accurately match the actual data which can be used to predict future population dynamics which is useful for conservation, resource management and epidemiology.
 
 **Question 2:** 
 The formula to calculate N at t = 4980 min is N(t) <- N0 * exp(r*t)
 - N(t) <- 1320 * exp(0.0095218*4980)
--** N(t) = 5.178388e+23**
+**N(t) = 5.178388e+23**
 
 The population size under exponential growth is significantly larger compared to logistic growth as it assumes no constraints on population growth. As logistic growth includes carrying capacity there are constraints to the population size which can be reached due to limiting resources - this can be applied to more real-world scenarios over longer time periods.
 
