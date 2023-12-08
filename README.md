@@ -32,4 +32,4 @@ The population size under exponential growth is significantly larger compared to
 
 **Question 3:** 
 - [comparing_exponential_and_logistic_growth.R](comparing_exponential_and_logistic_growth.R)
-- [Rplot.png](Rplot.png)
+- ![plot of exponential and logistic curves](Rplot.png)
