@@ -36,4 +36,3 @@ parameter estimates you found). Upload this graph to your repo and
 include it in the README.md file so it can be viewed in the repo
 homepage.
 - [comparing_exponential_and_logistic_growth.R](comparing_exponential_and_logistic_growth.R)
-

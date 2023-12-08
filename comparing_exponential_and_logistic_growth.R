@@ -1,4 +1,4 @@
-#Script for comparing exponential and lgoistic growth curves
+#Script for comparing exponential and logistic growth curves
 
 #install and load necessary library
 install.packages(gglplot2)
@@ -28,35 +28,16 @@ time_points <- growth_data$t
 #creating a data frame of the exponential and logistic models
 model_data <- data.frame(
   t = time_points,
-  exponential_growth = exponential_growth(time_points),
-  logistic_growth = logistic_growth(time_points)
+  N = c(exp_growth(time_points), logistic_growth(time_points)),
+  Type = rep(c("Exponential Growth", "Logistic Growth"), each = length(time_points))
 )
 
-#plotting the exponential, logistic and actual data curves
-ggplot() +
-  geom_point(aes(x = t, y = N), data = growth_data, colour = "black") +
-  geom_line(aes(x = t, y = exponential_growth), data = model_data, colour = "blue") +
-  geom_line(aes(x = t, y = logistic_growth), data = model_data, colour = "yellow") +
-  labs(title = "Comparing Exponential and Logistic Growth Curves",
-       x = "Time", y = "Population Size") +
-  theme_minimal() +
-  scale_color_manual(values = c("black", "blue", "yellow")) +
-  theme(legend.position = "bottom") +
-  guides(color = guide_legend(title = "Model", override.aes = list(linetype = c("blank", "solid", "solid")))) +
-  scale_y_continuous(labels = scales::scientific) +
-  annotate("text", x = Inf, y = Inf, hjust = 1.1, vjust = 1.1, label = "Black: Actual Data\nBlue: Exponential\nRed: Logistic", size = 3)
-
-  
 #plotting the exponential, logistic and actual data curves on a logarithm scale
-ggplot() +
-  geom_point(aes(x = t, y = N), data = growth_data, colour = "black") +
-  geom_line(aes(x = t, y = exponential_growth), data = model_data, colour = "blue") +
-  geom_line(aes(x = t, y = logistic_growth), data = model_data, colour = "yellow") +
-  labs(title = "Comparing Exponential and Logistic Growth Curves (Log10 Scale)",
-       x = "Time", y = "Population Size (log10 scale)") +
-  theme_minimal() +
-  scale_y_log10() +  # Apply logarithm scale transformation to y-axis
-  scale_color_manual(values = c("black", "blue", "yellow")) +
-  theme(legend.position = "bottom") +
-  guides(color = guide_legend(title = "Model", override.aes = list(linetype = c("blank", "solid", "solid")))) +
-  annotate("text", x = Inf, y = Inf, hjust = 1.1, vjust = 1.1, label = "Black: Actual Data\nBlue: Exponential\nRed: Logistic", size = 3)
+ggplot(model_data, aes(x = t, y = N, color = Type)) +
+  geom_line() +
+  labs(title = "Comparison of Exponential and Logistic Growth Models",
+       x = "Time", y = "Population Size", color = "Model Type") +
+  theme_bw() +
+  scale_y_log10() +
+  theme(legend.position = "bottom")
+

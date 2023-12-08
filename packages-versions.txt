@@ -1,0 +1,6 @@
+dplyr
+ggplot2
+
+sink(file = "package-versions.txt")
+sessionInfo()
+sink()
