@@ -30,9 +30,6 @@ There is good fit of the logistic model to the actual data. This suggests the lo
 The population size under exponential growth is significantly larger compared to logistic growth as it assumes no constraints on population growth. As logistic growth includes carrying capacity there are constraints to the population size which can be reached due to limiting resources - this can be applied to more real-world scenarios over longer time periods.
 
 
-**Question 3:** Add an R script to your repository that makes a graph
-comparing the exponential and logistic growth curves (using the same
-parameter estimates you found). Upload this graph to your repo and
-include it in the README.md file so it can be viewed in the repo
-homepage.
+**Question 3:** 
 - [comparing_exponential_and_logistic_growth.R](comparing_exponential_and_logistic_growth.R)
+- [Rplot.png](Rplot.png)
